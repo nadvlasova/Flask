@@ -27,6 +27,9 @@ def create_app(config_class=Config):
     from flask_blog_green.posts.routes import posts
     from flask_blog_green.errors.handers import errors
 
+    from flask_blog_green.main import routes
+    from flask_blog_green import models
+
     app.register_blueprint(main)
     app.register_blueprint(users)
     app.register_blueprint(posts)
